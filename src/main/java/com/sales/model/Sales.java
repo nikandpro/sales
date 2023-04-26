@@ -1,13 +1,11 @@
 package com.sales.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.sql.Date;
 
 @Entity
+@Table(name = "sales")
 public class Sales {
 
     @Id
@@ -67,4 +65,5 @@ public class Sales {
                 "Customer[id_Sale=%d, sumSales='%s', dateSupply='%s', dateOfSale='%s']",
                 id_Sale, sumSales, dateSupply, dateOfSale);
     }
+
 }
